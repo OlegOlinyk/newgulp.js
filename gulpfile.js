@@ -12,6 +12,9 @@ const connect = require('gulp-connect');
 const sass = require('gulp-sass');
 const uncss = require('gulp-uncss');
 
+gulp.task('default', ['buld', 'img', 'fonts', 'style', 'bower']);
+gulp.task('dev', ['buld', 'img', 'fonts', 'style', 'bower', 'watch']);
+
 //connect
 gulp.task('connect',  function() {
     connect.server({
